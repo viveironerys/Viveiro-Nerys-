@@ -1,0 +1,12 @@
+body{margin:0;font-family:Arial;background:#0f3d1f;color:white;}
+header{background:#145a1a;padding:10px;display:flex;gap:10px;flex-wrap:wrap;}
+button{padding:8px 12px;border:none;border-radius:6px;background:#2e7d32;color:white;cursor:pointer;font-weight:bold;}
+.container{padding:20px;}
+.box{background:rgba(255,255,255,0.1);padding:15px;border-radius:10px;margin-top:10px;}
+.hidden{display:none;}
+input, select{padding:6px;margin:5px;border-radius:6px;border:none;}
+.total{font-size:18px;font-weight:bold;}
+#produtoPesquisa{width:90%;}
+#listaSugestoes{list-style:none;padding-left:0;margin-top:0;}
+#listaSugestoes li:hover{background:rgba(255,255,255,0.2);cursor:pointer;}
+.logo{padding:10px;text-align:center;}

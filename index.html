@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Estação Verde</title>
+<link rel="stylesheet" href="estilo.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+
+<div class="logo">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAYAAABY..." alt="Logo Estação Verde" width="150">
+</div>
+
+<!-- LOGIN -->
+<div id="loginBox" class="box">
+<h3>Login</h3>
+<input id="loginInput" placeholder="Login"><br>
+<input id="senhaInput" type="password" placeholder="Senha"><br>
+<button onclick="login()">Entrar</button>
+<p id="loginMsg"></p>
+</div>
+
+<!-- SISTEMA -->
+<div id="sistema" class="hidden">
+
+<header>
+<button onclick="abrir('venda')">Nova Venda</button>
+<button onclick="abrir('produtos')">Produtos</button>
+<button onclick="abrir('historico')">Histórico</button>
+<button onclick="abrir('caixa')">Caixa</button>
+<button onclick="gerarPDFHistorico()">PDF</button>
+<button onclick="sair()">Sair</button>
+</header>
+
+<div class="container">
+
+<!-- VENDA -->
+<div id="venda" class="box hidden">
+<h3>Nova Venda</h3>
+<input id="cliente" placeholder="Nome do Cliente"><br>
+<input id="produtoPesquisa" placeholder="Pesquisar Produto">
+<ul id="listaSugestoes"></ul>
+<input id="quantidade" type="number" placeholder="Quantidade"><br>
+<select id="pagamento">
+<option value="Dinheiro">Dinheiro</option>
+<option value="Pix">Pix</option>
+<option value="Cartão">Cartão</option>
+</select><br>
+<button onclick="adicionarItem()">Adicionar</button>
+<hr>
+<ul id="lista"></ul>
+<p class="total">Total: R$ <span id="total">0</span></p>
+<button onclick="finalizarVenda()">Finalizar Venda</button>
+</div>
+
+<!-- PRODUTOS -->
+<div id="produtos" class="box hidden">
+<h3>Cadastro de Produtos</h3>
+<input id="nomeProduto" placeholder="Nome do Produto"><br>
+<input id="estoqueProduto" type="number" placeholder="Estoque"><br>
+<input id="precoProduto" type="number" placeholder="Preço Unitário"><br>
+<button onclick="adicionarProduto()">Adicionar Produto</button>
+<hr>
+<ul id="listaProdutos"></ul>
+</div>
+
+<!-- HISTÓRICO -->
+<div id="historico" class="box hidden">
+<h3>Histórico de Vendas</h3>
+<ul id="listaHistorico"></ul>
+</div>
+
+<!-- CAIXA -->
+<div id="caixa" class="box hidden">
+<h3>Controle de Caixa</h3>
+<input id="valorInicial" type="number" placeholder="Valor Inicial"><br>
+<button onclick="abrirCaixa()">Abrir Caixa</button>
+<button onclick="fecharCaixa()">Fechar Caixa</button>
+<p id="caixaInfo"></p>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
